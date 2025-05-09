@@ -115,7 +115,7 @@ function Home() {
                 }
             };
 
-            const response = await axios.post('http://localhost:9000/report/create', payload, headers);
+            const response = await axios.post('https://nutritrack-backend-prvv.onrender.com/report/create', payload, headers);
 
             if (response.data.success) {
                 handleSuccess('Meal report created successfully');
@@ -149,7 +149,7 @@ function Home() {
                 }
             };
 
-            const response = await axios.get(`http://localhost:9000/report/all?userId=${userId}&type=${type}`, headers);
+            const response = await axios.get(`https://nutritrack-backend-prvv.onrender.com/report/all?userId=${userId}&type=${type}`, headers);
 
             if (response.data.success) {
                 setReports(response.data.reports);
@@ -175,7 +175,7 @@ function Home() {
                 }
             };
 
-            const response = await axios.delete(`http://localhost:9000/report/delete?id=${id}`, headers);
+            const response = await axios.delete(`https://nutritrack-backend-prvv.onrender.com/report/delete?id=${id}`, headers);
 
             if (response.data.success) {
                 handleSuccess('Report deleted successfully');

@@ -26,7 +26,7 @@ function Login() {
             return handleError('email and password are required');
         }
         try {
-            const url = `http://localhost:9000/auth/login`;
+            const url = `https://nutritrack-backend-prvv.onrender.com/auth/login`;
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
